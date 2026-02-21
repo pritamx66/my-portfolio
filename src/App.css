@@ -3,6 +3,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 /* Responsive fix for mobile screens */
 /* GLOBAL MOBILE RESPONSIVENESS FIX */
+/* MOBILE UI OVERRIDE */
+@media (max-width: 768px) {
+  /* 1. Moves P R I T A M Logo to the left */
+  nav, .navbar, header {
+    display: flex !important;
+    justify-content: space-between !important; /* Pushes logo left, menu right */
+    align-items: center !important;
+    padding: 10px 20px !important;
+    text-align: left !important;
+  }
+
+  /* Target the specific logo/brand text */
+  .logo, nav h1, nav div:first-child {
+    margin-left: 0 !important;
+    text-align: left !important;
+    flex: 1 !important;
+  }
+
+  /* 2. Fix Technical Expertise Cards being cut off */
+  .skills-container, .grid, [class*="Expertise"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 0 15px !important; /* Prevents edge-to-edge touching */
+    box-sizing: border-box !important;
+  }
+
+  /* Force the individual skill boxes to fit the screen width */
+  .skill-card, [class*="card"], .skills-section div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Fix progress bar alignment */
+  .progress-bar, [class*="bar"] {
+    width: 100% !important;
+  }
+}
 @media (max-width: 768px) {
   /* Fix the main container to prevent horizontal scrolling */
   body, #root {
