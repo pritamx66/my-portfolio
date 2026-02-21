@@ -1,106 +1,79 @@
 /* 1. ALL @imports MUST BE AT THE TOP */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-/* Responsive fix for mobile screens */
-/* GLOBAL MOBILE RESPONSIVENESS FIX */
-/* CLEAN MOBILE RESET */
+/* FINAL COMPREHENSIVE MOBILE FIX */
 @media (max-width: 768px) {
-  /* Fix 1: Pull Logo to Left & Menu to Right */
-  nav, header, .navbar {
+  /* 1. Reset Global Containers */
+  html, body, #root, .App {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  /* 2. Fix Header: Logo Left, Menu Items Right */
+  nav, .navbar, header {
     display: flex !important;
-    flex-direction: row !important; /* Force side-by-side */
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 15px 20px !important;
-    text-align: left !important;
-  }
-
-  /* Target the 'PRITAM' text specifically */
-  .logo, nav h1, nav div:first-child {
-    margin: 0 !important;
-    text-align: left !important;
-    font-size: 1.5rem !important;
-  }
-
-  /* Fix 2: Wrap Name properly so it doesn't overlap header */
-  h1 {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
-    margin-top: 40px !important;
-    text-align: center !important;
-  }
-
-  /* Fix 3: Expertise Cards - Stop them from being cut off */
-  .skills-container, .grid, [class*="Expertise"] {
-    display: block !important; /* Stack them vertically */
+    padding: 10px 15px !important;
     width: 100% !important;
-    padding: 0 10px !important;
-  }
-
-  /* Force cards to stay inside the screen */
-  .skill-card, [class*="card"] {
-    width: 90% !important;
-    margin: 20px auto !important;
-    display: block !important;
-  }
-
-  /* Fix 4: Stop the horizontal shaking/scrolling */
-  body, html, #root {
-    overflow-x: hidden !important;
-    position: relative;
-  }
-}
-@media (max-width: 768px) {
-  /* Fix the main container to prevent horizontal scrolling */
-  body, #root {
-    overflow-x: hidden !important;
-    width: 100vw !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Force all sections to stay centered and within bounds */
-  section, .container {
-    width: 100% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
     box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
   }
 
-  /* Fix for overlapping text or large headers */
-  h1, h2, h3 {
-    width: 100% !important;
-    font-size: 2.2rem !important; /* Smaller size for mobile */
-    word-wrap: break-word !important;
-    text-align: center !important;
-    margin-bottom: 1rem !important;
+  /* Force 'PRITAM' to the far left */
+  .logo, nav h1, nav div:first-child {
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+    text-align: left !important;
+    flex: 1 !important;
   }
 
-  /* Ensure technical skill bars and cards take full width */
-  div[class*="grid"], .skills-container, .card {
+  /* Fix 'HOME WORKS CONTACT' spacing */
+  nav ul, .nav-links, nav div:last-child {
     display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    align-items: center !important;
+    gap: 10px !important;
+    font-size: 0.7rem !important;
+    flex: 2 !important;
+    justify-content: flex-end !important;
   }
-}
-@media (max-width: 768px) {
+
+  /* 3. Fix Hero Section (The Name 'Chakraborty') */
   h1 {
-    font-size: 3rem !important; /* Makes the name smaller on phones */
+    font-size: 2.2rem !important; /* Smaller so it fits one line */
     line-height: 1.1 !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
+    width: 100% !important;
     text-align: center !important;
+    word-wrap: break-word !important;
+    padding: 0 10px !important;
+    margin-top: 50px !important;
   }
-  
-  /* Adjusts the navigation menu spacing if it looks crowded */
-  nav {
-    padding: 10px !important;
-    font-size: 0.8rem !important;
+
+  /* 4. Fix Technical Expertise (Cards being cut off) */
+  .skills-container, .grid, [class*="Expertise"] {
+    display: flex !important;
+    flex-direction: column !important; /* Stack cards vertically */
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 30px !important;
+  }
+
+  /* Force each card (Frontend/Design) to stay inside the screen */
+  .skill-card, [class*="card"], [class*="Box"] {
+    width: 90% !important; /* Card takes 90% of screen width */
+    max-width: 90% !important;
+    min-width: 90% !important;
+    margin: 0 auto !important;
+    position: static !important; /* Prevents absolute positioning bugs */
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix Progress Bars inside cards */
+  .progress-bar, [class*="bar"], [class*="Line"] {
+    width: 100% !important;
   }
 }
 :root {
