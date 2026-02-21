@@ -2,6 +2,45 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 /* Responsive fix for mobile screens */
+/* GLOBAL MOBILE RESPONSIVENESS FIX */
+@media (max-width: 768px) {
+  /* Fix the main container to prevent horizontal scrolling */
+  body, #root {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Force all sections to stay centered and within bounds */
+  section, .container {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Fix for overlapping text or large headers */
+  h1, h2, h3 {
+    width: 100% !important;
+    font-size: 2.2rem !important; /* Smaller size for mobile */
+    word-wrap: break-word !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Ensure technical skill bars and cards take full width */
+  div[class*="grid"], .skills-container, .card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+}
 @media (max-width: 768px) {
   h1 {
     font-size: 3rem !important; /* Makes the name smaller on phones */
