@@ -74,11 +74,11 @@ const Works = () => (
       <h2 className="section-title" style={{ marginBottom: '60px' }}>Selected Works</h2>
       
       <div className="works-grid">
-        <a href="#" className="card project-card">
-          <h3>Project 1</h3>
-          <p>Coming Soon</p>
-          <span className="tag">Stay Tuned</span>
-        </a>
+       <a href="https://gocartpritam-git-vercel-react-server-f491c9-pritamx66s-projects.vercel.app?_vercel_share=0SyJteE56uZKjEzHksrxqn4X68kMTPmJ" target="_blank" rel="noopener noreferrer" className="card project-card">
+  <h3>goCart</h3> 
+  <p>An e-commerce website</p>
+  <span className="tag">View Live</span>
+</a>
 
         <a href="#" className="card project-card">
           <h3>Project 2</h3>
