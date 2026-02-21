@@ -15,7 +15,7 @@ const SkillBar = ({ label, percentage }) => (
 const Home = () => (
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
     <header className="hero">
-      <h1>Pritam Chakraborty</h1>
+      <h1 className="text-8xl ...">Pritam Chakraborty</h1>
       <Link to="/works" className="btn">View My works</Link>
     </header>
 

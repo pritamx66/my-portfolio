@@ -1,7 +1,22 @@
 /* 1. ALL @imports MUST BE AT THE TOP */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
+/* Responsive fix for mobile screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem !important; /* Makes the name smaller on phones */
+    line-height: 1.1 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+  }
+  
+  /* Adjusts the navigation menu spacing if it looks crowded */
+  nav {
+    padding: 10px !important;
+    font-size: 0.8rem !important;
+  }
+}
 :root {
     --bg: #0a0a0b;
     --card-bg: #111112; /* Slightly lighter than background for depth */
